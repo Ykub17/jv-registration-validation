@@ -22,14 +22,16 @@ public class RegistrationServiceImpl implements RegistrationService {
             throw new RegistrationException("Login cannot be null");
         }
         if (user.getLogin().length() < MIN_LOGIN_LENGTH) {
-            throw new RegistrationException("Login length must be at least " + MIN_LOGIN_LENGTH + " characters");
+            throw new RegistrationException("Login length must be at least "
+                    + MIN_LOGIN_LENGTH + " characters");
         }
 
         if (user.getPassword() == null) {
             throw new RegistrationException("Password cannot be null");
         }
         if (user.getPassword().length() < MIN_PASSWORD_LENGTH) {
-            throw new RegistrationException("Password length must be at least " + MIN_PASSWORD_LENGTH + " characters");
+            throw new RegistrationException("Password length must be at least "
+                    + MIN_PASSWORD_LENGTH + " characters");
         }
 
         if (user.getAge() == null) {
